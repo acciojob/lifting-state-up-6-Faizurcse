@@ -4,21 +4,21 @@ import TodoList from "./TodoList";
 
 function App() {
   const [todos, setTodos] = useState([
-    { text: 'Learn React', complete: false },
-    { text: 'Build a React app', complete: false },
-    { text: 'Deploy the React app', complete: false }
+    { text: 'Learn React', Complete: false },
+    { text: 'Build a React app', Complete: false },
+    { text: 'Deploy the React app', Complete: false }
   ]);
 
   function handleComplete(index) {
     const updatedTodos = [...todos];
-    updatedTodos[index].complete = true;
+    updatedTodos[index].Complete = true;
     setTodos(updatedTodos);
-    console.log(updatedTodos)
+    
   }
 
   return (
     <div>
-      <TodoList todos={todos} complete={handleComplete} />
+      <TodoList todos={todos} Complete={handleComplete} />
     </div>
   );
 }

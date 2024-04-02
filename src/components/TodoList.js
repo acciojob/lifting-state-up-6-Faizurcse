@@ -1,13 +1,14 @@
 import React from "react";
 
-function TodoList({ todos, complete }) {
+function TodoList({ todos, Complete }) {
     return (
       <>
+      
         <ul>
           {todos.map((todo, index) => (
             <li key={index}>
-              {todo.text} {!todo.complete && (
-                <button onClick={() => complete(index)}>complete</button>
+              {todo.text} {!todo.Complete && (
+                <button onClick={() => Complete(index)}>Complete</button>
               )}
             </li>
           ))}
