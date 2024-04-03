@@ -18,7 +18,10 @@ function App() {
 
   return (
     <div>
-      <TodoList todos={todos} Complete={handleComplete} />
+      {todos.map((item,index)=><TodoList key={index} todos={item} Complete={handleComplete} index={index}/> 
+         
+      )}
+      
     </div>
   );
 }
