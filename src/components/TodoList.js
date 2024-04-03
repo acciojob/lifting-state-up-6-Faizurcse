@@ -8,6 +8,7 @@ function TodoList({ todos, Complete,index }) {
     
     setClicked(!clicked)
     Complete(index)
+    console.log(e.target.id)
   }
     return (
       <>
@@ -16,7 +17,7 @@ function TodoList({ todos, Complete,index }) {
          
             <li>
               {todos.text} {!todos.Complete && clicked?(
-                <button id={index} onClick={myfun}>Complete</button>
+                <button id={todos.id} onClick={myfun}>Complete</button>
               ):''}
             </li>
           

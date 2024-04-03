@@ -4,9 +4,9 @@ import TodoList from "./TodoList";
 
 function App() {
   const [todos, setTodos] = useState([
-    { text: 'Learn React', Complete: false },
-    { text: 'Build a React app', Complete: false },
-    { text: 'Deploy the React app', Complete: false }
+    { id:'#1', text: 'Learn React', Complete: false },
+    {id:'#2', text: 'Build a React app', Complete: false },
+    {id:'#3', text: 'Deploy the React app', Complete: false }
   ]);
 
   function handleComplete(index) {
@@ -18,9 +18,9 @@ function App() {
 
   return (
     <div>
-      {todos.map((item,index)=><TodoList key={index} todos={item} Complete={handleComplete} index={index}/> 
-         
-      )}
+      {todos.map((item,index)=>{
+        return  <TodoList key={index} todos={item} Complete={handleComplete} index={index}/> 
+      })}
       
     </div>
   );
